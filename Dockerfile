@@ -8,7 +8,11 @@ WORKDIR /app
 COPY main.py .
 
 # Install required Python packages
-RUN pip install fastapi uvicorn pydantic
+
+RUN pip install --upgrade pip==25.3 && \
+    pip install fastapi uvicorn pydanti
+
+
 
 # Expose the port FastAPI will run on
 EXPOSE 8000
